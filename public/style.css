@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+  }
+  body {
+    background: #eee;
+    padding: 0 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  }
+  
+  header {
+    background-color: #302e28;
+    margin: auto -16px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    color: #fff;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+  }
+  header span{
+    color:#fff;
+    font-family: "McLaren", cursive;
+    font-weight: 100;
+  }
+  
+  footer {
+    /* position: absolute; */
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    margin:20px;
+  }
+  
+  footer p {
+    color: #000;
+  }
+
+  .centered{
+    text-align:center;
+  }
+
+  .signin, .signup{
+    text-decoration: underline;
+    align-self: flex-end;
+    padding:10px;
+    cursor:pointer;
+  }
+
+  
