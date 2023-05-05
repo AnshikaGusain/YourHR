@@ -5,13 +5,13 @@ const Header = () => {
     return (
         <header>
             <div className="d-flex justify-content-around">
-                <div className="mr-auto">
+                <div className="mr-auto p-2">
                     <h1>ABC</h1>
                 </div>
-                <div className="signin">
+                <div className="signin p-2">
                     <Link to="/signin"><span>Sign In</span></Link>
                 </div>
-                <div className="signup">
+                <div className="signup p-2">
                     <Link to="/signup">
                         <span>Sign Up</span>
                     </Link>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const Signin = () => {
+const Signin = ({set}) => {
     const navigate = useNavigate();
     const [data, setData] = useState({});
     const handleChange = (event) => {
@@ -24,36 +24,43 @@ const Signin = () => {
             .then(res => res.json())
             .then(user => {
                 if (user._id) {
+                    set(user);
                     navigate("/home");
                 }
-                // console.log(user);
+                else if(user==="User not registered yet") {
+                    (document.getElementById("modalAlert")).click();
+                    // console.log(user);
+                }
             })
             .catch((err) => console.log("Error"));
     }
     return (
         <div className="container mt-5">
             {/* <!-- Button trigger modal --> */}
-            {/* <button type="button" id="alert" className="btn btn-primary d-none" data-toggle="modal" data-target="#exampleModalLong"></button> */}
+            <button type="button" id="modalAlert" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
 
             {/* <!-- Modal --> */}
-            {/* <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLongTitle">Not Registered</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Not Registered</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            User is not registered yet, register it first
+                            User is not registered yet
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={() => this.props.onRouteChange("Register")}>Okay</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" data-bs-dismiss="modal" className="btn btn-primary" onClick={()=>{
+                                navigate("/signup");
+                            }}>Sign Up</button>
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
             <div className="row justify-content-center">
                 <div className="col-sm-6">
                     <div className="card">
@@ -65,16 +72,23 @@ const Signin = () => {
                             }}>
                                 <h1 className="centered">Sign In</h1>
                                 <div className="form-group">
-                                    <label for="email">Email</label>
+                                    <label htmlFor="email">Email</label>
                                     <input type="email" className="form-control" name="email" onChange={handleChange} />
                                 </div>
                                 <div className="form-group">
-                                    <label for="password">Password</label>
+                                    <label htmlFor="password">Password</label>
                                     <input type="password" className="form-control" name="password" onChange={handleChange} />
                                 </div>
                                 <button type="submit" className="btn btn-dark">Sign In</button>
                             </form>
-
+                            <div>
+                                <p className="m-3">
+                                    <span>Don't have an account?</span>
+                                    <strong className="m-2 centered" role="button" onClick={() => {
+                                        navigate("/signup");
+                                    }}>Sign Up</strong>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

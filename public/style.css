@@ -7,7 +7,7 @@
     font-family: "Montserrat", sans-serif;
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
+    overflow-x: hidden;
   }
   body {
     background: #eee;
@@ -55,8 +55,10 @@
   .signin, .signup{
     text-decoration: underline;
     align-self: flex-end;
-    padding:10px;
     cursor:pointer;
+    margin:10px;
+    font-size: 0.85rem;
   }
+
 
   
