@@ -14,7 +14,7 @@ const Signup=({set})=>{
         })
     }
     const handleSubmit=()=>{
-        fetch("http://localhost:3001/signup", {
+        fetch("https://yourhr-backend-g293.onrender.com/signup", {
             method: 'Post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -30,7 +30,6 @@ const Signup=({set})=>{
                 set(user);
                 navigate("/home");
             }
-            // console.log(user);
         })
         .catch((err)=>console.log("Error"));
     }
@@ -41,7 +40,7 @@ const Signup=({set})=>{
                     <div className="card">
                         <div className="card-body">
                             {/* Makes POST request to /signup route */}
-                            <form method="POST" action="http://localhost:3001/signup" onSubmit={(event)=>{
+                            <form method="POST" action="https://yourhr-backend-g293.onrender.com/signup" onSubmit={(event)=>{
                                 handleSubmit();
                                 event.preventDefault();
                                 }}>

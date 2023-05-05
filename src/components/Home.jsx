@@ -12,7 +12,7 @@ const Home = ({ user }) => {
         formData.append('firstname', firstname);
         formData.append('lastname', lastname);
         formData.append('email', email);
-        fetch('http://localhost:3001/upload', {
+        fetch('https://yourhr-backend-g293.onrender.com/upload', {
             method: 'POST',
             body: formData
         })
@@ -70,7 +70,7 @@ const Home = ({ user }) => {
                     <div className="card">
                         <div className="card-body">
                             {/* Makes POST request to /signup route */}
-                            <form method="POST" action="http://localhost:3001/upload" onSubmit={handleSubmit} enctype="multipart/form-data">
+                            <form method="POST" action="https://yourhr-backend-g293.onrender.com/upload" onSubmit={handleSubmit} enctype="multipart/form-data">
                                 <h3 className="centered">Upload your resume</h3>
                                 <div className="form-group">
                                     <input type="file" className="form-control m-2 p-2" name="uploadFile" accept="application/pdf" required />

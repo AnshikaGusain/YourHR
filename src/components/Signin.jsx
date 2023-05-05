@@ -13,7 +13,7 @@ const Signin = ({set}) => {
         })
     }
     const handleSubmit = () => {
-        fetch("http://localhost:3001/signin", {
+        fetch("https://yourhr-backend-g293.onrender.com/signin", {
             method: 'Post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -29,7 +29,6 @@ const Signin = ({set}) => {
                 }
                 else if(user==="User not registered yet") {
                     (document.getElementById("modalAlert")).click();
-                    // console.log(user);
                 }
             })
             .catch((err) => console.log("Error"));
@@ -66,7 +65,7 @@ const Signin = ({set}) => {
                     <div className="card">
                         <div className="card-body">
                             {/* Makes POST request to /signin route */}
-                            <form action="http://localhost:3001/signin" method="POST" onSubmit={(event) => {
+                            <form action="https://yourhr-backend-g293.onrender.com/signin" method="POST" onSubmit={(event) => {
                                 handleSubmit();
                                 event.preventDefault();
                             }}>
