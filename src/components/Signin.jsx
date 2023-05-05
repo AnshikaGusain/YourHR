@@ -30,6 +30,9 @@ const Signin = ({set}) => {
                 else if(user==="User not registered yet") {
                     (document.getElementById("modalAlert")).click();
                 }
+                else if(user==="Wrong Credentials"){
+                    (document.getElementById("modalAlert2")).click();
+                }
             })
             .catch((err) => console.log("Error"));
     }
@@ -37,6 +40,7 @@ const Signin = ({set}) => {
         <div className="container mt-5">
             {/* <!-- Button trigger modal --> */}
             <button type="button" id="modalAlert" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+            <button type="button" id="modalAlert2" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal2"></button>
 
             {/* <!-- Modal --> */}
             <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -52,10 +56,29 @@ const Signin = ({set}) => {
                             User is not registered yet
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
+                                window.location.reload();
+                            }}>Close</button>
                             <button type="button" data-bs-dismiss="modal" className="btn btn-primary" onClick={()=>{
                                 navigate("/signup");
                             }}>Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="modal fade" id="exampleModal2" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel2">Wrong Credentials</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
+                                window.location.reload();
+                            }}>Close</button>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,6 @@ const Home = ({ user }) => {
             .then(res => {
                 if (res === "File uploaded successfully") {
                     document.getElementById("uploaded").click();
-
                 }
                 else{
                     document.getElementById("error").click();
@@ -45,7 +44,9 @@ const Home = ({ user }) => {
                             </button>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Okay</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
+                                window.location.reload();
+                            }}>Okay</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +61,9 @@ const Home = ({ user }) => {
                             </button>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Okay</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
+                                window.location.reload();
+                            }}>Okay</button>
                         </div>
                     </div>
                 </div>
