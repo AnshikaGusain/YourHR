@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             <div className="d-flex justify-content-around">
                 <div className="mr-auto p-2">
-                    <h1>ABC</h1>
+                    <h1>YourHR</h1>
                 </div>
                 <div className="signin p-2">
                     <Link to="/signin"><span>Sign In</span></Link>
