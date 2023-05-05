@@ -44,9 +44,7 @@ const Home = ({ user }) => {
                             </button>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
-                                window.location.reload();
-                            }}>Okay</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" >Okay</button>
                         </div>
                     </div>
                 </div>
@@ -61,9 +59,7 @@ const Home = ({ user }) => {
                             </button>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
-                                window.location.reload();
-                            }}>Okay</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" >Okay</button>
                         </div>
                     </div>
                 </div>

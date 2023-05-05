@@ -56,9 +56,7 @@ const Signin = ({set}) => {
                             User is not registered yet
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
-                                window.location.reload();
-                            }}>Close</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
                             <button type="button" data-bs-dismiss="modal" className="btn btn-primary" onClick={()=>{
                                 navigate("/signup");
                             }}>Sign Up</button>
@@ -76,9 +74,7 @@ const Signin = ({set}) => {
                             </button>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={()=>{
-                                window.location.reload();
-                            }}>Close</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>

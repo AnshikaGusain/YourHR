@@ -53,9 +53,7 @@ const Signup = ({ set }) => {
                             User is already registered yet
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={() => {
-                                window.location.reload();
-                            }}>Close</button>
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
                             <button type="button" data-bs-dismiss="modal" className="btn btn-primary" onClick={() => {
                                 navigate("/signin");
                             }}>Sign In</button>
