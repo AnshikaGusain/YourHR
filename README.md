@@ -1,7 +1,7 @@
-Website Documentation for YourHR website
+**Website Documentation for YourHR website**
 
 
-Overview
+**Overview**
 
 The YourHR website is a web application built using ReactJS, a popular JavaScript library for building user interfaces where job-seeking users can sign in/sign up and upload their resumes. The website is built using:-
 Front-end:
@@ -12,11 +12,11 @@ Database:
 MongoDB
 
 
-Getting Started
+**Getting Started**
 
 To get started with the website, simply navigate to the URL for the website(   ) and you will be able to use the functionalities provided by the website.
 
-Structure and Design
+**Structure and Design**
 
 The website has two parts: Front end and Back end
 
@@ -28,7 +28,7 @@ The website has two parts: Front end and Back end
 
 The website uses a responsive design, which means that it is optimized for viewing on a variety of screen sizes and devices. The design is created using Bootstrap, with additional custom CSS styles for specific elements.
 
-Code Structure and Organization
+**Code Structure and Organization**
 The front end and back end of the website are organized into several directories and files:
 	The front end has the following structure:
  
@@ -45,7 +45,7 @@ o	index.js: It is where we usually mount/render our main react component onto ou
 •	controllers directory: The functions that separate the code to route different requests from the code that processes requests.
 •	server.js: This file responds to the requests of the front end of the website using different controllers created, which includes storing the user’s credentials and information and sending a response for each request.
 
-Dependencies and Libraries
+**Dependencies and Libraries**
 The website relies on several third-party links, libraries, and dependencies, including:
 •	Used in the front end:
 o	Bootstrap: It is a free, open source front-end development framework for the creation of websites and web apps.
@@ -61,11 +61,11 @@ o	multer: It is a middleware designed to handle multipart/form-data in forms.
 •	Database service used:
 o	MongoDB Atlas: It is an integrated suite of data services centered around a cloud database designed to accelerate and simplify how you build with data. Build faster and build smarter with a developer data platform that helps solve your data challenges. 
 
-Server Configuration
+**Server Configuration**
 The website is hosted on a server running Node.js, Express, and other libraries mentioned above with a MongoDB database using MongoDB Atlas for storing user data. The back end responds the requests with specific endpoints. Here, the post endpoints are:
 o	/signin
 o	/signup
 o	/upload
 
-Conclusion
+**Conclusion**
 This documentation provides an overview of the YourHR Website, including its structure, design, code organization, and server configuration. It is intended to serve as a reference for developers and stakeholders who need to understand how the website works, and how it can be maintained and updated over time.
