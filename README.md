@@ -103,6 +103,12 @@ o	/signup
 
 o	/upload
 
+**Database Structure:**
+
+MongoDB Atlas is used for storing users’ data. The database schema for the YourHR website includes the following collections:
+•	users: Stores the user’s credentials, i.e., firstname, lastname, email, password (hashed password).
+•	resumes: Stores the user’s resume file along with their information.
+
 
 **Conclusion**
 
