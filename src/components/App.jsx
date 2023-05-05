@@ -22,7 +22,6 @@ function App() {
       <BrowserRouter>
       <Header />
       <Routes>
-          {/* <Route index element={<signin />} /> */}
           <Route path="/" element={<Signup set={set}/>}/>
           <Route path="/signin" element={<Signin set={set}/>} />
           <Route path="/signup" element={<Signup set={set}/>} />
